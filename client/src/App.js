@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 import LandingPage from './components/views/LandingPage/LandingPage'
 import LoginPage from './components/views/LoginPage/LoginPage'
-import R
+import RegisterPage from './components/views/RegisterPage/RegisterPage'
 function App() {
   return (
     <div className="App">
@@ -18,24 +18,18 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/register">register</Link>
             </li>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/login">Login</Link>
             </li>
             <hr/>
           </ul>
         </div>
         <Switch>
-          <Route>
-            <Home />
-          </Route>
-          <Route>
-            <Home />
-          </Route>
-          <Route>
-            <Home />
-          </Route>
+          <Route exact path="/" component={LandingPage}/>
+          <Route exact path="/login" component={LoginPage}/>
+          <Route exact path="/register" component={RegisterPage}/>
         </Switch>
       </Router> 
     </div>

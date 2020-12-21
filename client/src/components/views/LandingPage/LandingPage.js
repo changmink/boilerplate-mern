@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import { withRouter } from 'react-router-dom'
+
 function LandingPage(props) {
     const onClickHandler = () => {
         axios.get('/api/users/logout')
@@ -23,4 +25,4 @@ function LandingPage(props) {
     )
 }
 
-export default LandingPage
+export default withRouter(LandingPage)
